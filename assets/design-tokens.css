@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "Helvetica Now Display";
+  src: url("./HelveticaNowDisplay-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Now Display";
+  src: url("./HelveticaNowDisplay-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+:root {
+  --tcz-orange: #f05223;
+  --tcz-black: #000000;
+  --tcz-gray-600: #919499;
+  --tcz-gray-300: #d4d4d4;
+  --tcz-off-white: #f5f0f0;
+  --tcz-white: #ffffff;
+  --tcz-ink: #121212;
+  --tcz-border: #d4d4d4;
+  --tcz-focus: #f05223;
+  --tcz-font: "Helvetica Now Display", Arial, sans-serif;
+  --tcz-radius-sm: 8px;
+  --tcz-radius-md: 12px;
+  --tcz-space-1: 4px;
+  --tcz-space-2: 8px;
+  --tcz-space-3: 12px;
+  --tcz-space-4: 16px;
+  --tcz-space-6: 24px;
+  --tcz-space-8: 32px;
+  --tcz-space-12: 48px;
+}
+
+body {
+  background: var(--tcz-off-white);
+  color: var(--tcz-ink);
+  font-family: var(--tcz-font);
+}
+
+:focus-visible {
+  outline: 3px solid var(--tcz-focus);
+  outline-offset: 2px;
+}
