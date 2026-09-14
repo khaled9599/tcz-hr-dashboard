@@ -1,0 +1,48 @@
+@import "tailwindcss" theme(static);
+@import "@nuxt/ui";
+
+@font-face {
+  font-family: 'Helvetica Now Display';
+  src: url('/tcz/HelveticaNowDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Now Display';
+  src: url('/tcz/HelveticaNowDisplay-Medium.ttf') format('truetype');
+  font-weight: 500 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme static {
+  --font-sans: 'Helvetica Now Display', Arial, sans-serif;
+  --color-orange-50: #FFF3EE;
+  --color-orange-100: #FFE1D3;
+  --color-orange-200: #FFC0A6;
+  --color-orange-300: #FF9670;
+  --color-orange-400: #F96A3C;
+  --color-orange-500: #F05223;
+  --color-orange-600: #D53D14;
+  --color-orange-700: #B22F11;
+  --color-orange-800: #8E2814;
+  --color-orange-900: #742416;
+  --color-orange-950: #3F0F08;
+}
+
+:root {
+  --tcz-orange: #f05223;
+  --tcz-ink: #111111;
+  --tcz-canvas: #f7f5f4;
+  --tcz-muted: #777b80;
+  --tcz-line: #dedad8;
+}
+
+html { font-feature-settings: 'tnum' 1, 'ss01' 1; }
+body { background: var(--tcz-canvas); }
+.dark body { background: #080808; }
+.metric-number { font-variant-numeric: tabular-nums; letter-spacing: -0.035em; }
+.tcz-panel { border: 1px solid color-mix(in srgb, var(--ui-border) 86%, transparent); box-shadow: 0 16px 50px rgb(42 25 18 / 0.035); }
+.tcz-grid { background-image: linear-gradient(to right, rgb(145 148 153 / .08) 1px, transparent 1px), linear-gradient(to bottom, rgb(145 148 153 / .08) 1px, transparent 1px); background-size: 32px 32px; }

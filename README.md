@@ -1,44 +1,36 @@
-# TCZ HR Dashboard Skill
+# KOG Client Performance Dashboard
 
-A reusable agent skill for designing and building HR dashboards for The Creative Zone.
+Phase 1 of the future TCZ CRM client workspace. This Nuxt application gives KOG a secure view of media spend, leads submitted, CPL, qualified leads, CPQL, campaign efficiency, and lead quality.
 
-The package combines TCZ brand assets with dashboard strategy, HR information architecture, privacy controls, accessibility guidance, data-visualization rules, and implementation patterns.
+The product uses the [Nuxt UI dashboard template](https://github.com/nuxt-ui-templates/dashboard) as its technical foundation and the TCZ dashboard skill repository as its brand and decision-design source. The application itself is intentionally separate from the reusable skill.
 
-## Included
+## Local review
 
-- TCZ logos and color palette
-- Helvetica Now Display font files
-- TCZ visual reference PDF
-- Reusable CSS design tokens
-- HR modules, KPI definitions, and role permissions
-- Decision-led dashboard design method
-- Responsive implementation patterns
-- Optional Nuxt UI dashboard guidance
-
-## Skill structure
-
-```text
-SKILL.md
-agents/openai.yaml
-assets/
-references/
+```bash
+cp .env.example .env
+# Replace SESSION_SECRET and the demo credentials in .env
+pnpm install
+pnpm dev
 ```
 
-## Use
+Demo mode is allowed only outside production. Production requires MySQL, migrations, a seeded user, and `NUXT_DEMO_MODE=false`.
 
-Install or load the repository as an agent skill, then invoke:
+## Production commands
 
-```text
-Use $tcz-hr-dashboard to create a responsive HR dashboard for The Creative Zone.
+```bash
+pnpm install --frozen-lockfile
+pnpm db:migrate
+pnpm build
+node .output/server/index.mjs
 ```
 
-The skill does not require Nuxt. It respects the framework selected by the user or already used by the project. When Nuxt or Vue is selected, it can use the official Nuxt UI dashboard template as a structural reference while replacing its demo content and styling with TCZ requirements.
+## Quality checks
 
-## Brand ownership
+```bash
+pnpm typecheck
+pnpm lint
+pnpm test
+pnpm build
+```
 
-The Creative Zone brand assets and supplied reference materials remain the property of their respective owners. No open-source license is granted for the bundled brand assets or fonts.
-
-## Research references
-
-- [Nuxt UI Dashboard Template](https://github.com/nuxt-ui-templates/dashboard)
-- [Dashboard Design Skill](https://github.com/mares29/dashboard-design-skill)
+See `docs/DEPLOYMENT.md` for Hostinger setup and `docs/GOOGLE_SHEETS_SYNC.md` for Google service-account configuration.

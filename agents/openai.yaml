@@ -1,7 +1,0 @@
-interface:
-  display_name: "TCZ HR Dashboard"
-  short_description: "Build branded HR dashboards for The Creative Zone"
-  icon_small: "./assets/tcz-logo-black.png"
-  icon_large: "./assets/tcz-logo-white.svg"
-  brand_color: "#F05223"
-  default_prompt: "Use $tcz-hr-dashboard to create a responsive HR dashboard for The Creative Zone."
